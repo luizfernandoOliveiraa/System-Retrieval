@@ -1,3 +1,16 @@
+"""
+A utilização do modelo de retrieval com vector space é realizar a recuperação dos documentos mais similares a uma query.
+
+Por exemplo, o corpo desse repositório é composto por documentos com frases de variadas sobre o universo de TI.
+
+Quando o sistema recebe uma query buscando algo no tipo: "machine learning", o sistema de retrieval é capaz de
+buscar e retornar os documentos mais similares a essa query, mesmo que não contenham exatamente os termos "machine" e "learning".
+
+Sendo assim, esse modelo é indicado para tarefas onde podemos ter sugestões parecidas, como uma aplicação de
+e-commerce onde o usuário busca por "notebook" e o sistema retorna produtos relacionados, como "laptop", "ultrabook", etc.
+
+"""
+
 import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
